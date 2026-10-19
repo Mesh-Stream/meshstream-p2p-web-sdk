@@ -2,6 +2,8 @@
 
 [简体中文](README.zh-CN.md)
 
+[Release Maintenance Contract](RELEASE_CONTRACT.md)
+
 This repository contains the source for the MeshStream online Web Demo. It
 demonstrates HLS, DASH, and native HLS playback with peer count, P2P/CDN
 traffic, and offload metrics.
