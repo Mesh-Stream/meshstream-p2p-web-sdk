@@ -1,5 +1,13 @@
 # MeshStream Web Demo
 
+## MeshStream SDKs
+
+- [Online Demo](https://demo.meshstream.net/) for a live Web playback and P2P delivery view.
+- [Web Demo](https://github.com/Mesh-Stream/meshstream-p2p-web-sdk) using the published npm SDK.
+- [Android SDK](https://github.com/Mesh-Stream/meshstream-p2p-android-sdk) for Media3 / ExoPlayer apps.
+- [Apple SDK](https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk) for iOS and macOS apps.
+- [Windows SDK](https://github.com/Mesh-Stream/meshstream-p2p-Windows-sdk) for C/C++ desktop apps.
+
 这是 MeshStream Web SDK 的线上演示站源码。它展示 HLS、DASH 和浏览器原生
 HLS 的播放接入，以及 Peer 数、P2P/CDN 流量和分发占比等运行时指标。
 
