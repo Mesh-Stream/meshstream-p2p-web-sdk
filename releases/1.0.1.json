@@ -4,9 +4,9 @@
   "version": "1.0.1",
   "artifact": {
     "file": "meshstream-p2p-web-1.0.1.tgz",
-    "sha256": "8496b8d5ca53a0b3fa385e70861f3bf84367db8f8fa7e3133170b76c3b059c52",
-    "integrity": "sha512-oBkira/PxnZaCGCYb1YSblRbMx8K1UMbfo9CMS3wlsK0bygg+fHf+nD6LduljEqWaTVzqzXzovxCUIMppRXOOQ==",
-    "bytes": 1823352,
+    "sha256": "783cefaa7a3cc2236581d1cef148a268d2c293014025a572c3e295d087357968",
+    "integrity": "sha512-WJE3ZYH7TN4YI/AshZboo3tAHSlrvWbVAofsU4uS7GP141z/L6BQav23VJRULJEEkUw3urWbITs/peCSoSVXAw==",
+    "bytes": 1823399,
     "npmTarball": "https://registry.npmjs.org/@meshstream/p2p-web/-/p2p-web-1.0.1.tgz"
   },
   "source": {
