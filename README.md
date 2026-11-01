@@ -6,9 +6,7 @@ This repository contains the source for the MeshStream online Web Demo. It
 demonstrates HLS, DASH, and native HLS playback with peer count, P2P/CDN
 traffic, and offload metrics.
 
-The Demo consumes the public npm package `@meshstream/p2p-web@1.0.1`. It does
-not use a workspace dependency, local SDK archive, or MeshStream service source
-code.
+The Demo consumes the published npm package `@meshstream/p2p-web@1.0.1`.
 
 ## MeshStream SDKs
 
@@ -59,8 +57,7 @@ register the script from the site root.
 ## Update the SDK
 
 Change the `@meshstream/p2p-web` version in `package.json`, run `npm install`,
-then build and validate the Demo. Do not replace the dependency with a local
-path, npm alias, or manually copied SDK build output.
+then build and validate the Demo against the published package.
 
 ## Support
 

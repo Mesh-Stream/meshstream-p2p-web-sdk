@@ -13,8 +13,7 @@
 这是 MeshStream Web SDK 的线上演示站源码。它展示 HLS、DASH 和浏览器原生
 HLS 的播放接入，以及 Peer 数、P2P/CDN 流量和分发占比等运行时指标。
 
-Demo 直接依赖 npm 已发布的 `@meshstream/p2p-web@1.0.1`，不引用 MeshStream
-主工程源码或本地打包文件。线上部署构建出的产物可直接作为静态站点发布。
+Demo 直接依赖 npm 已发布的 `@meshstream/p2p-web@1.0.1`。线上部署构建出的产物可直接作为静态站点发布。
 
 ## 功能
 
@@ -55,8 +54,7 @@ npm run build
 ## 依赖更新
 
 升级 Demo 使用的 SDK 时，修改 `package.json` 中
-`@meshstream/p2p-web` 的版本，重新执行 `npm install`，再构建和验证。不要通过
-本地路径、npm alias 或手工复制 SDK 构建产物替换该依赖。
+`@meshstream/p2p-web` 的版本，重新执行 `npm install`，再构建和验证已发布版本。
 
 ## 支持
 
