@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.5 — 2026-11-06
+
+- Attach P2P to an already-playing CDN HLS session after bootstrap completes without reloading the media element or resetting playback position.
+- Preserve CDN counters and public playback event subscriptions across the late P2P upgrade.
+- Updated the Demo to consume @meshstream/p2p-web@1.0.5.
+
 ## 1.0.4 — 2026-11-06
 
 - Keep CDN HLS fallback on hls.js for MSE-capable browsers so fragment statistics continue during bootstrap outages.

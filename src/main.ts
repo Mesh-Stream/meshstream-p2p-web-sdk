@@ -103,7 +103,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
       <div><span>HTTP down</span><strong id="http-down">0 B</strong></div>
       <div><span>P2P up</span><strong id="p2p-up">0 B</strong></div>
       <div><span>Offload</span><strong id="ratio">0%</strong></div>
-      <div><span>SDK version</span><strong>1.0.0</strong></div>
+      <div><span>SDK version</span><strong>1.0.5</strong></div>
       <div><span>Config version</span><strong id="config-version">-</strong></div>
     </section>
     <section class="segment-panel" aria-label="Segment delivery source">
@@ -307,17 +307,6 @@ async function startPlayback(options: { forceRestart?: boolean } = {}): Promise<
         p2pClient.on?.("peer-close", (details) => log(`Peer closed: ${summarizeEvent(details)}`));
         p2pClient.on?.("segment-error", (details) => log(`Peer/segment error: ${summarizeSegmentError(details)}`));
         p2pClient.on?.("tracker-error", (details) => log(`Tracker error detail: ${summarizeEvent(details)}`));
-        p2pClient.addEventListener({
-          onP2pReady: () => log("P2P ready"),
-          onP2pUnavailable: (reason) => log(`P2P unavailable (${reason}); CDN playback continues`),
-          onTrackerError: (totalErrors) => log(`Tracker errors: ${totalErrors}`),
-          onPeerConnectError: (totalErrors) => {
-            const diagnostics = player?.diagnostics?.();
-            const detail = diagnostics?.lastPeerError ? ` (${diagnostics.lastPeerError})` : "";
-            log(`Peer connect errors: ${totalErrors}${detail}`);
-          },
-          onCdnFallback: () => undefined,
-        });
       }
       playButton.disabled = false;
       p2pEnabled = result.sdkConfig?.p2pEnabled ?? true;
@@ -346,6 +335,21 @@ async function startPlayback(options: { forceRestart?: boolean } = {}): Promise<
         logCapabilityFallback(result.fallbackReason ?? result.capability.reason ?? "UNSUPPORTED", result.capability.recommendedMode);
       }
     }
+    session.addEventListener({
+      onP2pReady: () => {
+        p2pEnabled = true;
+        setStatus(video.paused ? "Connecting" : "Playing");
+        log("P2P ready");
+      },
+      onP2pUnavailable: (reason) => log(`P2P unavailable (${reason}); CDN playback continues`),
+      onTrackerError: (totalErrors) => log(`Tracker errors: ${totalErrors}`),
+      onPeerConnectError: (totalErrors) => {
+        const diagnostics = player?.diagnostics?.();
+        const detail = diagnostics?.lastPeerError ? ` (${diagnostics.lastPeerError})` : "";
+        log(`Peer connect errors: ${totalErrors}${detail}`);
+      },
+      onCdnFallback: () => undefined,
+    });
     if (result.sdkConfig) {
       configVersionShown = result.sdkConfig.configVersion ?? "-";
       log(
