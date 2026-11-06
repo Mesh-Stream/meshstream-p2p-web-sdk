@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.4 — 2026-11-06
+
+- Keep CDN HLS fallback on hls.js for MSE-capable browsers so fragment statistics continue during bootstrap outages.
+- Preserve Native HLS fallback for platforms explicitly classified as `native-hls-cdn`.
+- Updated the Demo to consume `@meshstream/p2p-web@1.0.4`.
+
 ## 1.0.3 — 2026-11-06
 
 - Count CDN HLS fragment bytes and attempts while bootstrap is pending or P2P falls back.

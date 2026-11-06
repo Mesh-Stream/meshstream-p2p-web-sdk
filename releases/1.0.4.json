@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "package": "@meshstream/p2p-web",
+  "version": "1.0.4",
+  "artifact": {
+    "file": "meshstream-p2p-web-1.0.4.tgz",
+    "sha256": "d004bc157d683f7ddc8af951a11ece97bcec9550da0e8d6ce8f3f9c65abf7d5f",
+    "integrity": "sha512-w+54+vvTtGmqrKjxUvneMT4u4xoXnwcJ73ociU9xpQVAiuVj1aeG4DV37QN/T/ZrsuxJj1g4Gbz/e0h1cjXjDQ==",
+    "bytes": 1827115,
+    "npmTarball": "https://registry.npmjs.org/@meshstream/p2p-web/-/p2p-web-1.0.4.tgz"
+  },
+  "source": {
+    "repository": "https://github.com/Mesh-Stream/meshstream-p2p-web-sdk.git",
+    "branch": "main",
+    "demoDependency": "@meshstream/p2p-web@1.0.4"
+  },
+  "verification": {
+    "p2pcdnTests": "203 passed",
+    "p2pcdnBuild": "npm run build:web-sdk:release",
+    "tarballContents": "version 1.0.4, public ESM entry points, declarations, Service Worker, license"
+  }
+}
