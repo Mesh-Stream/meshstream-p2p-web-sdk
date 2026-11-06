@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.3 — 2026-11-06
+
+- Count CDN HLS fragment bytes and attempts while bootstrap is pending or P2P falls back.
+- Keep Demo statistics polling active during CDN-only startup so playback metrics do not freeze.
+- Updated the Demo to consume `@meshstream/p2p-web@1.0.3`.
+
 ## 1.0.2 — 2026-11-06
 
 - Updated the Demo to consume `@meshstream/p2p-web@1.0.2`.
