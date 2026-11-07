@@ -5,7 +5,7 @@ import {
   type MeshStreamMediaPlayer,
   type P2pStats,
 } from "@meshstream/p2p-web";
-import { attachToDashJs, attachToShaka } from "@meshstream/p2p-web-published/adapters";
+import { attachToDashJs, attachToShaka } from "@meshstream/p2p-web/adapters";
 import * as dashjs from "dashjs";
 import "./style.css";
 

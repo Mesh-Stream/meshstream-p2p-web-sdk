@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "package": "@meshstream/p2p-web",
+  "version": "1.1.0",
+  "artifact": {
+    "file": "meshstream-p2p-web-1.1.0.tgz",
+    "sha256": "4e97e4895f80a711a47d219c5eea4eac432e1cf9fee2bd2ebb176b10e2aa4522",
+    "integrity": "sha512-n0z81g7/78Rtfh+Mquso4eRAxYvjaJR8Z2Hni3UhcxiJjV9kovnXo/K5w+IQiEnsH7IVeycGg3GMfpXsPNM4dw==",
+    "bytes": 1908609,
+    "npmTarball": "https://registry.npmjs.org/@meshstream/p2p-web/-/p2p-web-1.1.0.tgz"
+  },
+  "source": {
+    "repository": "https://github.com/Mesh-Stream/meshstream-p2p-web-sdk",
+    "branch": "main",
+    "demoDependency": "@meshstream/p2p-web@1.1.0"
+  },
+  "verification": {
+    "p2pcdnTests": "243 passed",
+    "browserMatrix": "107 browser cases passed across HLS, DASH, MP3, MP4 and supported player adapters",
+    "p2pcdnBuild": "npm run build:web-sdk:release",
+    "tarballContents": "version 1.1.0, public ESM entry points, declarations, Service Worker, license"
+  }
+}

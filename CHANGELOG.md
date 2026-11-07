@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0 — 2026-11-08
+
+- Release the verified Web SDK build with the complete HLS, DASH, MP3, and MP4 fallback and recovery matrix.
+- Preserve playback, statistics callbacks, P2P reporting, CDN fallback, and player adapter behavior across bootstrap failures and delayed recovery.
+- Updated the Demo to consume `@meshstream/p2p-web@1.1.0`.
+
 ## 1.0.11 — 2026-11-07
 
 - Upgrade an already-playing CDN HLS session after delayed Bootstrap without restarting playback.
