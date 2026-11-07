@@ -1,0 +1,11 @@
+Sintel trailer
+Copyright (c) Blender Foundation | durian.blender.org
+Licensed under Creative Commons Attribution 3.0 Unported (CC BY 3.0).
+License: https://creativecommons.org/licenses/by/3.0/
+Project and attribution: https://durian.blender.org/
+Unmodified source: https://media.w3.org/2010/05/sintel/trailer.mp4
+File: sintel-trailer.mp4
+SHA-256: b670602fa00934ca27c4351bb0efe7ea7a07fae57284e44226025eeed7c51254
+
+The video is bundled as an HTTP Range sample for the MeshStream MP4 demo.
+No endorsement by the Blender Foundation is implied.

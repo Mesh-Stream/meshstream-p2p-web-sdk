@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.11 — 2026-11-07
+
+- Upgrade an already-playing CDN HLS session after delayed Bootstrap without restarting playback.
+- Replay the current hls.js manifest state so the late P2P client joins the tracker and begins reporting.
+- Preserve CDN traffic counters and event subscriptions across the upgrade.
+- Updated the Demo to consume `@meshstream/p2p-web@1.0.11`.
+
 ## 1.0.5 — 2026-11-06
 
 - Attach P2P to an already-playing CDN HLS session after bootstrap completes without reloading the media element or resetting playback position.
