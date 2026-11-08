@@ -16,7 +16,7 @@
   },
   "verification": {
     "p2pcdnTests": "252 passed",
-    "browserMatrix": "Pending post-publish public Demo verification",
+    "browserMatrix": "Verified 2026-11-08: demo.meshstream.net, Pages deployment d082a68a.meshstream-web-demo.pages.dev, and Workers deployment meshstream-web-demo-worker.zhangjianqiangderek.workers.dev returned HTTP 200 with the 1.1.3 bundle; production bootstrap endpoint is embedded and the HLS demo entry loads.",
     "p2pcdnBuild": "npm run build:release -w @meshstream/p2p-web",
     "tarballContents": "version 1.1.3, public ESM entry points, declarations, Service Worker, license"
   }
