@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.2 — 2026-11-08
+
+- Share one per-session media segment ledger between CDN fallback and recovered P2P playback.
+- Keep seek and recreated runtime IDs from double-counting the same URL and byte range.
+- Add regression coverage for cross-source recovery accounting and byte-range media.
+- Updated the Demo to consume `@meshstream/p2p-web@1.1.2`.
+
 ## 1.1.1 — 2026-11-08
 
 - Fix CDN media-byte accounting across repeated HLS seeks by de-duplicating completed fragments by URL and byte range.
