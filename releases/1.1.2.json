@@ -16,7 +16,7 @@
   },
   "verification": {
     "p2pcdnTests": "250 passed",
-    "browserMatrix": "Pending public 1.1.2 install verification",
+    "browserMatrix": "Public Demo HLS dual-peer playback and repeated seek passed; p2p+cdn remained 22418060 bytes, with one connected peer per window",
     "p2pcdnBuild": "npm run build:release -w @meshstream/p2p-web",
     "tarballContents": "version 1.1.2, public ESM entry points, declarations, Service Worker, license"
   }
