@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.1 — 2026-11-08
+
+- Fix CDN media-byte accounting across repeated HLS seeks by de-duplicating completed fragments by URL and byte range.
+- Preserve cumulative CDN bytes in P2P recovery and statistics reports.
+- Add regression coverage for repeated seeks, byte-range HLS fragments, and late bootstrap recovery.
+- Updated the Demo to consume `@meshstream/p2p-web@1.1.1`.
+
 ## 1.1.0 — 2026-11-08
 
 - Release the verified Web SDK build with the complete HLS, DASH, MP3, and MP4 fallback and recovery matrix.
