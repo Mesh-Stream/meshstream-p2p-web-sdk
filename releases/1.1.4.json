@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "package": "@meshstream/p2p-web",
+  "version": "1.1.4",
+  "artifact": {
+    "file": "meshstream-p2p-web-1.1.4.tgz",
+    "sha256": "acbd6ded28a89cb883799830d3d28f296773371534ada64a63a487fcec8ff709",
+    "integrity": "sha512-juQ+rXz94SUa73Jm3K1qZtW1JMVCgP71p+z1V/LH/fAi6kEYXQ9VjkVv8aRZAPXqw/TbhuqD1UNkR2u6oKuhGA==",
+    "bytes": 1915510,
+    "npmTarball": "https://registry.npmjs.org/@meshstream/p2p-web/-/p2p-web-1.1.4.tgz"
+  },
+  "source": {
+    "repository": "https://github.com/Mesh-Stream/meshstream-p2p-web-sdk",
+    "branch": "main",
+    "demoDependency": "@meshstream/p2p-web@1.1.4"
+  },
+  "verification": {
+    "p2pcdnTests": "255 passed",
+    "p2pcdnBuild": "npm run build:release -w @meshstream/p2p-web",
+    "tarballContents": "version 1.1.4, public ESM entry points, declarations, Service Worker, license",
+    "accounting": "Overlapping direct-file P2P/CDN ranges and repeated no-Range responses are charged once; final Service Worker report uses the deduplicated snapshot."
+  }
+}

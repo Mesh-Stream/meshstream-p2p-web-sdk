@@ -2,6 +2,11 @@ name: Publish Web SDK to npm
 
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        description: "SDK version to publish"
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -21,4 +26,8 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: Publish verified tarball
-        run: npm publish meshstream-p2p-web-1.0.1.tgz --access public --registry https://registry.npmjs.org/
+        env:
+          VERSION: ${{ inputs.version }}
+        run: |
+          test -f "meshstream-p2p-web-${VERSION}.tgz"
+          npm publish "meshstream-p2p-web-${VERSION}.tgz" --access public --registry https://registry.npmjs.org/

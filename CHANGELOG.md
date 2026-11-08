@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.4 — 2026-11-08
+
+- Deduplicate overlapping MP4/MP3 byte ranges across P2P, CDN fallback and repeated seeks.
+- Keep Demo traffic counters source-aware by using the SDK statistics snapshot directly.
+- Verify that final Service Worker reports contain the deduplicated download counters.
+- Updated the Demo to consume `@meshstream/p2p-web@1.1.4`.
+
 ## 1.1.3 — 2026-11-08
 
 - Normalize HLS byte ranges across hls.js and Core for consistent media-byte accounting.

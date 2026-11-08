@@ -162,10 +162,6 @@ let shakaPlayer: { destroy?: () => Promise<unknown> | unknown } | undefined;
 let shakaDestroyPromise: Promise<void> = Promise.resolve();
 let finalDebugStats: Partial<P2pStats> | undefined;
 let playbackStartSequence = 0;
-let observedCdnHttpDownloaded = 0;
-let observedCdnHttpAttempts = 0;
-let observedCdnHttpSuccesses = 0;
-let observedCdnHttpFailures = 0;
 const segmentQueue: ("p2p" | "cdn" | "idle")[] = [];
 
 declare global {
@@ -307,24 +303,6 @@ async function startPlayback(options: { forceRestart?: boolean } = {}): Promise<
       ? { httpDownloadInitialTimeoutMs: testInitialP2pWaitMs }
       : {}),
     onHlsCreated: (hls: DemoHls) => {
-      hls.on("hlsFragLoading", () => {
-        observedCdnHttpAttempts += 1;
-      });
-      hls.on("hlsFragLoaded", (_event, data) => {
-        const details = data as {
-          stats?: { loaded?: unknown; total?: unknown };
-          payload?: { byteLength?: unknown };
-        } | undefined;
-        const loaded = Number(details?.stats?.loaded)
-          || Number(details?.payload?.byteLength)
-          || Number(details?.stats?.total)
-          || 0;
-        if (loaded > 0) observedCdnHttpDownloaded += loaded;
-        observedCdnHttpSuccesses += 1;
-      });
-      hls.on("hlsFragLoadError", () => {
-        observedCdnHttpFailures += 1;
-      });
       hls.on(HLS_MANIFEST_PARSED_EVENT, () => {
         if (video.paused) setStatus("Buffering");
       });
@@ -513,17 +491,10 @@ function renderSegmentBlocks(): void {
 function renderStats(): void {
   if (!isP2pMediaPlayer(player)) return;
   const stats = player.statistics() as P2pStats;
-  const httpDownloaded = Math.max(stats.httpDownloaded, observedCdnHttpDownloaded);
-  const httpAttempts = Math.max(stats.httpAttempts ?? 0, observedCdnHttpAttempts);
-  const httpSuccesses = Math.max(stats.httpSegmentDownloadSuccesses, observedCdnHttpSuccesses);
-  const httpFailures = Math.max(stats.httpSegmentDownloadFailures, observedCdnHttpFailures);
-  const visibleStats = {
-    ...stats,
-    httpDownloaded,
-    httpAttempts,
-    httpSegmentDownloadSuccesses: httpSuccesses,
-    httpSegmentDownloadFailures: httpFailures,
-  };
+  // The SDK owns source-aware accounting. Raw hls.js FRAG_LOADED events also
+  // fire for P2P-served fragments, so counting them as CDN bytes here makes a
+  // P2P-only playback look like it downloaded the media twice.
+  const visibleStats = stats;
   element("peers").textContent = String(visibleStats.connectedPeers);
   element("p2p-down").textContent = formatBytes(visibleStats.p2pDownloaded);
   element("http-down").textContent = formatBytes(visibleStats.httpDownloaded);
@@ -549,10 +520,6 @@ function cleanup(): void {
   configVersionShown = "-";
   lastTrafficLogAt = 0;
   lastTrafficStats = undefined;
-  observedCdnHttpDownloaded = 0;
-  observedCdnHttpAttempts = 0;
-  observedCdnHttpSuccesses = 0;
-  observedCdnHttpFailures = 0;
   resetStatsView();
   finalDebugStats = previousPlayer ? { ...previousPlayer.statistics() } : finalDebugStats;
   previousPlayer?.dispose();
@@ -604,11 +571,13 @@ async function startShakaDemo(input: {
   const instance = new shaka.Player();
   await instance.attach(video);
   shakaPlayer = instance;
-  return attachToShaka({
+  const options = {
     key: input.key,
     url: input.streamUrl,
     player: instance as unknown as Parameters<typeof attachToShaka>[0]["player"],
-  });
+    shakaLibrary: shaka,
+  };
+  return attachToShaka(options);
 }
 
 function resetStatsView(): void {
