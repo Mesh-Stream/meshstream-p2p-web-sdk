@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.3 — 2026-11-08
+
+- Normalize HLS byte ranges across hls.js and Core for consistent media-byte accounting.
+- Share deduplication across Shaka, dash.js, RxPlayer CDN fallback and recovered P2P paths.
+- Read Shaka Range headers and ignore zero-byte responses when claiming media segments.
+- Add regression coverage for repeated seeks, byte ranges, Shaka fallback and zero-byte retries.
+- Updated the Demo to consume `@meshstream/p2p-web@1.1.3`.
+
 ## 1.1.2 — 2026-11-08
 
 - Share one per-session media segment ledger between CDN fallback and recovered P2P playback.
