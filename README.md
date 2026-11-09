@@ -128,6 +128,15 @@ Include `dist/meshstream-sw.js` and `dist/media/` in the upload. Workers require
 HTTPS or localhost; an ordinary LAN HTTP address will not work. See
 [deployment](docs/deployment.md) for Nginx, subdirectories, media CORS and caching.
 
+## Other platforms
+
+- [iOS / macOS](https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk): `MeshStreamKit` for native Apple apps, installed through Swift Package Manager or CocoaPods.
+- [Android](https://github.com/Mesh-Stream/meshstream-p2p-android-sdk): Maven SDK for Kotlin / Java apps, with Media3 / ExoPlayer integration.
+- [Windows](https://github.com/Mesh-Stream/meshstream-p2p-Windows-sdk): C / C++ API for Windows 10 / 11 x64 desktop apps.
+- [uni-app](https://github.com/Mesh-Stream/meshstream-p2p-uniapp-sdk): UTS plugin for uni-app Vue 3 apps, integrating the native iOS and Android SDKs.
+- [Flutter](https://github.com/Mesh-Stream/meshstream-p2p-flutter-sdk): `meshstream_p2p` Dart plugin for iOS / Android, usable with `video_player`.
+- [React Native](https://github.com/Mesh-Stream/meshstream-p2p-react-native-sdk): `react-native-meshstream` npm package for iOS / Android, usable with `react-native-video`.
+
 ## Upgrades and support
 
 To update the demo, install an exact published version and commit both

@@ -118,6 +118,15 @@ Key 可以设置在平台的构建环境变量 `VITE_MESHSTREAM_SDK_KEY` 中。
 或 localhost，普通局域网 HTTP 地址无法注册。
 Nginx 配置、子目录部署、媒体跨域和缓存设置见[部署说明](docs/deployment.zh-CN.md)。
 
+## 其他平台
+
+- [iOS / macOS](https://github.com/Mesh-Stream/meshstream-p2p-ios-sdk)：原生 Apple 应用使用 `MeshStreamKit`，通过 Swift Package Manager 或 CocoaPods 安装。
+- [Android](https://github.com/Mesh-Stream/meshstream-p2p-android-sdk)：Kotlin / Java 应用使用 Maven SDK，可接入 Media3 / ExoPlayer 等播放器。
+- [Windows](https://github.com/Mesh-Stream/meshstream-p2p-Windows-sdk)：面向 Windows 10 / 11 x64 桌面应用，提供 C / C++ 接口。
+- [uni-app](https://github.com/Mesh-Stream/meshstream-p2p-uniapp-sdk)：面向 uni-app Vue 3 App 的 UTS 插件，接入 iOS 和 Android 原生 SDK。
+- [Flutter](https://github.com/Mesh-Stream/meshstream-p2p-flutter-sdk)：使用 Dart 插件 `meshstream_p2p` 接入 iOS / Android，可配合 `video_player` 使用。
+- [React Native](https://github.com/Mesh-Stream/meshstream-p2p-react-native-sdk)：使用 npm 包 `react-native-meshstream` 接入 iOS / Android，可配合 `react-native-video` 使用。
+
 ## 升级与支持
 
 升级 Demo 依赖时，安装已发布的精确版本，并提交 `package.json` 和 `package-lock.json`：
