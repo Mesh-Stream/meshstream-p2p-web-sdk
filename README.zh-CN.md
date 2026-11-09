@@ -15,6 +15,10 @@ HLS 的播放接入，以及 Peer 数、P2P/CDN 流量和分发占比等运行�
 
 Demo 直接依赖 npm 已发布的 `@meshstream/p2p-web@1.1.4`。线上部署构建出的产物可直接作为静态站点发布。
 
+SDK 通过 [npm](https://www.npmjs.com/package/@meshstream/p2p-web) 分发；历史 `.tgz` 包作为
+[GitHub Releases 附件](https://github.com/Mesh-Stream/meshstream-p2p-web-sdk/releases) 保存，
+版本与校验和记录保留在 [`releases/`](releases/README.md)。
+
 ## 功能
 
 - 支持 hls.js、dash.js、Shaka Player、RxPlayer、Video.js、Plyr 和浏览器原生 HLS；

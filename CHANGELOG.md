@@ -1,5 +1,11 @@
 # Changelog
 
+## Repository maintenance — 2026-11-09
+
+- Archive SDK tarballs as GitHub Release attachments instead of keeping them in the main branch.
+- Preserve historical manifests and tags; npm package versions and the Demo dependency are unchanged.
+- Download and verify release size, checksums, package name and version before Trusted Publishing.
+
 ## 1.1.4 — 2026-11-08
 
 - Deduplicate overlapping MP4/MP3 byte ranges across P2P, CDN fallback and repeated seeks.

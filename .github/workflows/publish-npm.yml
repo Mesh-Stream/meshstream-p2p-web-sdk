@@ -7,6 +7,10 @@ on:
         description: "SDK version to publish"
         required: true
         type: string
+      verify_only:
+        description: "Verify the Release archive without publishing to npm"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -25,9 +29,23 @@ jobs:
           node-version: 24
           registry-url: https://registry.npmjs.org
 
+      - name: Test archive verification
+        run: node --test scripts/verify-release-archive.test.mjs
+
+      - name: Download and verify release archive
+        env:
+          VERSION: ${{ inputs.version }}
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          node --input-type=module -e 'if (!/^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/.test(process.env.VERSION)) throw new Error("Invalid SDK version")'
+          mkdir -p "$RUNNER_TEMP/web-sdk"
+          gh release download "$VERSION" --pattern "meshstream-p2p-web-${VERSION}.tgz" --dir "$RUNNER_TEMP/web-sdk"
+          node scripts/verify-release-archive.mjs "$VERSION" "$RUNNER_TEMP/web-sdk"
+
       - name: Publish verified tarball
+        if: ${{ !inputs.verify_only }}
         env:
           VERSION: ${{ inputs.version }}
         run: |
-          test -f "meshstream-p2p-web-${VERSION}.tgz"
-          npm publish "meshstream-p2p-web-${VERSION}.tgz" --access public --registry https://registry.npmjs.org/
+          npm publish "$RUNNER_TEMP/web-sdk/meshstream-p2p-web-${VERSION}.tgz" --access public --registry https://registry.npmjs.org/ --ignore-scripts

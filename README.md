@@ -8,6 +8,10 @@ traffic, and offload metrics.
 
 The Demo consumes the published npm package `@meshstream/p2p-web@1.1.4`.
 
+SDK packages are distributed through [npm](https://www.npmjs.com/package/@meshstream/p2p-web).
+Versioned `.tgz` archives are kept as [GitHub Release attachments](https://github.com/Mesh-Stream/meshstream-p2p-web-sdk/releases),
+with checksums and release records in [`releases/`](releases/README.md).
+
 ## MeshStream SDKs
 
 - [Online Demo](https://demo.meshstream.net/) to view the deployed experience.

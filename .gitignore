@@ -9,3 +9,4 @@ dist/
 npm-debug.log*
 *.tsbuildinfo
 public/meshstream-sw.js
+*.tgz

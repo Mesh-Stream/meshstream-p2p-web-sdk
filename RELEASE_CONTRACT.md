@@ -31,6 +31,13 @@ repository's README and changelog.
 
 ### Web Demo
 
+- Build, test and pack the SDK in P2PCDN. Commit version/checksum metadata here,
+  and upload the verified `.tgz` to the matching GitHub Release. Keep tarballs
+  out of the Git tree; see [archive and publishing instructions](releases/README.md).
+- The `publish-npm.yml` workflow downloads that Release attachment, checks its
+  size, SHA-256, npm integrity, package name and version against the committed
+  manifest, then publishes using npm Trusted Publishing. Preserve this workflow
+  filename so the existing npm trust configuration continues to match.
 - Update `@meshstream/p2p-web` in `package.json` and `package-lock.json` to the
   published stable version.
 - Run `npm install` and `npm run build`.
