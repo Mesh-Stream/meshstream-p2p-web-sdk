@@ -1,9 +1,19 @@
-# MeshStream Web SDK
+# MeshStream P2P Web SDK
 
-[English](README.md) · [在线演示](https://demo.meshstream.net/) · [npm](https://www.npmjs.com/package/@meshstream/p2p-web)
+[English](README.md) · [官网](https://meshstream.net/zh/) · [接入文档](https://meshstream.net/zh/docs/sdk/web-setup/) · [npm](https://www.npmjs.com/package/@meshstream/p2p-web) · [在线 Demo](https://demo.meshstream.net/)
 
-MeshStream 为浏览器中的 HLS、DASH 和 MP4 播放提供 P2P 分发，无法建立 P2P 连接时回退到 CDN。
-本仓库提供接入示例和演示站，当前使用 `@meshstream/p2p-web@1.1.4`。
+MeshStream 是面向浏览器的 JavaScript / TypeScript P2P 视频与音频流媒体 SDK，为 HLS、MPEG-DASH、MP4 和 MP3 播放提供 WebRTC 点对点分发，P2P 不可用时回退到 HTTP/CDN。
+
+本仓库提供接入示例和在线 Demo，当前使用已发布的 `@meshstream/p2p-web@1.1.4`。
+
+## 产品能力
+
+- HLS、MPEG-DASH 流媒体，以及支持 HTTP Range 和跨域访问的 MP4/MP3 媒体。
+- 提供 hls.js、dash.js、Shaka Player 与 RxPlayer 接入方式。
+- 提供 Peer 数量、P2P/CDN 下载和上传流量统计。
+- 通过 npm 安装，包含 TypeScript 示例和可开启多个 Peer 窗口的 HTTPS Demo。
+
+媒体解码与格式兼容性取决于所选播放器和平台；P2P 可用性取决于网络条件及持有相同内容的 Peer。
 
 ## 安装
 

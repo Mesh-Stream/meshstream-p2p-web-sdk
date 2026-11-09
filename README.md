@@ -1,10 +1,19 @@
-# MeshStream Web SDK
+# MeshStream P2P Web SDK
 
-[简体中文](README.zh-CN.md) · [Live demo](https://demo.meshstream.net/) · [npm](https://www.npmjs.com/package/@meshstream/p2p-web)
+[简体中文](README.zh-CN.md) · [Website](https://meshstream.net/) · [Documentation](https://meshstream.net/docs/sdk/web-setup/) · [npm](https://www.npmjs.com/package/@meshstream/p2p-web) · [Live demo](https://demo.meshstream.net/)
 
-MeshStream adds P2P delivery to HLS, DASH and MP4 playback in the browser, with CDN
-fallback when P2P is unavailable. This repository contains integration examples
-and the demo site, using `@meshstream/p2p-web@1.1.4`.
+MeshStream is a JavaScript / TypeScript P2P video and audio streaming SDK for the browser. It adds WebRTC peer-assisted delivery to HLS, MPEG-DASH, MP4 and MP3 playback, with HTTP/CDN fallback when P2P is unavailable.
+
+This repository contains integration examples and the live demo, using the published `@meshstream/p2p-web@1.1.4` package.
+
+## Features
+
+- HLS and MPEG-DASH streaming, plus HTTP Range MP4/MP3 media with origin CORS support.
+- Integration paths for hls.js, dash.js, Shaka Player and RxPlayer.
+- Peer counts, P2P/CDN download counters and upload statistics.
+- npm installation, TypeScript examples and an HTTPS demo with multiple peer windows.
+
+Media decoding and format support depend on your chosen player and platform. P2P availability depends on network conditions and peers with matching content.
 
 ## Install
 
