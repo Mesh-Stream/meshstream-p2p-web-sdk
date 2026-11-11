@@ -4,7 +4,7 @@
 
 MeshStream is a JavaScript / TypeScript P2P video and audio streaming SDK for the browser. It adds WebRTC peer-assisted delivery to HLS, MPEG-DASH, MP4 and MP3 playback, with HTTP/CDN fallback when P2P is unavailable.
 
-This repository contains integration examples and the live demo, using the published `@meshstream/p2p-web@1.1.4` package.
+This repository contains integration examples and the live demo, using the published `@meshstream/p2p-web@1.1.5` package.
 
 ## Features
 
@@ -20,7 +20,7 @@ Media decoding and format support depend on your chosen player and platform. P2P
 In your frontend project:
 
 ```bash
-npm install @meshstream/p2p-web@1.1.4
+npm install @meshstream/p2p-web@1.1.5
 ```
 
 Create an application in the [MeshStream console](https://console.meshstream.net/)
