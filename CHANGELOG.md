@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.5 — 2026-11-12
+
+- Reject oversized cache entries without evicting useful cached media; refresh memory diagnostics after pruning.
+- Coalesce peer/error telemetry bursts and release pending report timers on disposal.
+- Use a 90-second default periodic report interval with a bounded 30–40-second first sample; platform report settings still apply.
+- Apply platform peer and offer limits consistently across the supported playback transports.
+- Preserve live retention, CDN playback fallback and unique-media download accounting.
+
 ## Repository maintenance — 2026-11-09
 
 - Archive SDK tarballs as GitHub Release attachments instead of keeping them in the main branch.

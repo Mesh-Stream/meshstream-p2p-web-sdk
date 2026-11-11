@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "package": "@meshstream/p2p-web",
+  "version": "1.1.5",
+  "artifact": {
+    "file": "meshstream-p2p-web-1.1.5.tgz",
+    "sha256": "f05c1c53d3a2c906475c370961e66e46bac54710ec2bf7cf67e2b1275b4a3743",
+    "integrity": "sha512-WnJGV7nNW7lfnoPM1jkzgYQjRFAB5x/1Y/h/Fn7xfGJrm6XcjahmmfbxTGbH2VTAiny+QstG2hVy4UKI8yrpJQ==",
+    "bytes": 1917427,
+    "npmTarball": "https://registry.npmjs.org/@meshstream/p2p-web/-/p2p-web-1.1.5.tgz"
+  },
+  "source": {
+    "repository": "https://github.com/Mesh-Stream/meshstream-p2p-web-sdk",
+    "branch": "main",
+    "p2pcdnCommit": "8df1da6def1ebeb45e1af8efc78ced6d9e290227",
+    "demoDependency": "@meshstream/p2p-web@1.1.5"
+  },
+  "verification": {
+    "p2pcdnTests": "263 passed",
+    "p2pcdnBuild": "npm run package:web:sdk -- --pack-destination <archive-directory>",
+    "tarballContents": "version 1.1.5, public ESM entry points, declarations, Service Worker and third-party license",
+    "accounting": "Per-session unique media-byte accounting is preserved across repeated Range requests, CDN fallback and P2P recovery.",
+    "browserMatrix": "64 unique Chrome cases passed: HLS, DASH, MP4, MP3, supported adapters, bootstrap recovery, seek, accounting, CDN fallback and disposal. Local two-session fixture scope."
+  }
+}
