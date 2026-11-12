@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "package": "@meshstream/p2p-web",
+  "version": "1.1.6",
+  "artifact": {
+    "file": "meshstream-p2p-web-1.1.6.tgz",
+    "sha256": "24e93e9a29390738d7c1990a394b8eb1734a2746c69888b3831109d59e64ae38",
+    "integrity": "sha512-qizkQkx80h9Yh/LB+FUoAUjwQ3iw5pXYieET1O0hGX9uQHUEHFH5Batczkbrzqd02tqMh8InW/eCXW+hJPrPKw==",
+    "bytes": 1917543,
+    "npmTarball": "https://registry.npmjs.org/@meshstream/p2p-web/-/p2p-web-1.1.6.tgz"
+  },
+  "source": {
+    "repository": "https://github.com/Mesh-Stream/meshstream-p2p-web-sdk",
+    "branch": "main",
+    "p2pcdnCommit": "817c8327fb9224e20c0939c823b3e58c6836763d",
+    "demoDependency": "@meshstream/p2p-web@1.1.6"
+  },
+  "verification": {
+    "p2pcdnTests": "267 passed",
+    "tarballContents": "Public ESM entries, TypeScript declarations, Service Worker and third-party license verified from the original archive",
+    "authRecovery": "Session admission applies to Service Worker HLS/MP4/MP3 when bootstrap arrives after CDN playback. Token failure leaves CDN active and prevents an unauthorized Tracker connection.",
+    "browserRegression": "9 current-version Chrome cases passed: SW HLS, MP4 and MP3 each with ready, delayed and transient-503 bootstrap. Authenticated production-API candidate additionally passed delayed admission, paired P2P, seeks, unique media bounds, reports and session cleanup."
+  }
+}

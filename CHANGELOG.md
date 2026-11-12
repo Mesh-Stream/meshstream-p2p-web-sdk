@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.6 — 2026-11-12
+
+- Fix authenticated Service Worker P2P recovery when bootstrap finishes after CDN playback starts: admit the existing session before Tracker connection and statistics reporting.
+- Keep CDN playback and accumulated download statistics when session admission is unavailable.
+- Add regression coverage for late HLS/MP4/MP3 authorization and token failure.
+
 ## 1.1.5 — 2026-11-12
 
 - Reject oversized cache entries without evicting useful cached media; refresh memory diagnostics after pruning.
