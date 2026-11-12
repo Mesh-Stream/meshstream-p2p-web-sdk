@@ -4,7 +4,7 @@
 
 MeshStream 是面向浏览器的 JavaScript / TypeScript P2P 视频与音频流媒体 SDK，为 HLS、MPEG-DASH、MP4 和 MP3 播放提供 WebRTC 点对点分发，P2P 不可用时回退到 HTTP/CDN。
 
-本仓库提供接入示例和在线 Demo，当前使用已发布的 `@meshstream/p2p-web@1.1.5`。
+本仓库提供接入示例和在线 Demo，当前使用已发布的 `@meshstream/p2p-web@1.1.6`。
 
 ## 产品能力
 
@@ -20,7 +20,7 @@ MeshStream 是面向浏览器的 JavaScript / TypeScript P2P 视频与音频流�
 在自己的前端项目中安装：
 
 ```bash
-npm install @meshstream/p2p-web@1.1.5
+npm install @meshstream/p2p-web@1.1.6
 ```
 
 先在 [MeshStream 控制台](https://console.meshstream.net/)创建应用，取得已启用的 Web SDK Key。
