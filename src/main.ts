@@ -293,7 +293,7 @@ async function startPlayback(options: { forceRestart?: boolean } = {}): Promise<
     ...(playbackTransport === "service-worker"
       ? {
           serviceWorker: {
-            url: `${import.meta.env.BASE_URL}meshstream-sw.js`,
+            url: `${import.meta.env.BASE_URL}meshstream-sw.js?sdk=${encodeURIComponent(getSdkVersion())}`,
             scope: import.meta.env.BASE_URL,
             autoRegister: true,
           },
