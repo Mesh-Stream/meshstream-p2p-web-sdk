@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.7 — 2026-11-13
+
+- Share one per-session scheduler for periodic and peer/error reports, with at least 20 seconds between ordinary writes.
+- Merge queued events into the latest cumulative statistics snapshot and prevent overlapping report timers.
+- Send pagehide snapshots immediately through keepalive, even while another report is pending, using an unexpired cached session token.
+- Keep disposal reports, playback callbacks, CDN fallback and unique-media traffic accounting intact.
+
 ## 1.1.6 — 2026-11-12
 
 - Fix authenticated Service Worker P2P recovery when bootstrap finishes after CDN playback starts: admit the existing session before Tracker connection and statistics reporting.
