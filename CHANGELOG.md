@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.8 — 2026-11-13
+
+- Fix Shaka playback position tracking when P2P attaches after bootstrap recovery.
+- Keep seeking and replay responsive without reloading the active media session.
+- Preserve download accounting, statistics callbacks and CDN fallback.
+
 ## 1.1.7 — 2026-11-13
 
 - Share one per-session scheduler for periodic and peer/error reports, with at least 20 seconds between ordinary writes.

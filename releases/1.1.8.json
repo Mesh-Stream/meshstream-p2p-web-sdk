@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "package": "@meshstream/p2p-web",
+  "version": "1.1.8",
+  "artifact": {
+    "file": "meshstream-p2p-web-1.1.8.tgz",
+    "sha256": "a40e5bc68b695432654c41fb65c5c976031ac1ecedd44e777f7378bb97bc19cb",
+    "integrity": "sha512-UEFjp7fR+EelWxjIbSLfvzOudW/ATtjtKoPwSB5Mw47g6nQ4Lim3+u7xPTM9RTMPrh90ZSayLDOrZJYgOTajuw==",
+    "bytes": 1918329,
+    "npmTarball": "https://registry.npmjs.org/@meshstream/p2p-web/-/p2p-web-1.1.8.tgz"
+  },
+  "source": {
+    "repository": "https://github.com/Mesh-Stream/meshstream-p2p-web-sdk",
+    "branch": "main",
+    "p2pcdnCommit": "2b0c5f2b2e6d4c508c29c63d7dc1cf9f7d228917",
+    "demoDependency": "@meshstream/p2p-web@1.1.8"
+  },
+  "verification": {
+    "p2pcdnTests": "286 passed",
+    "tarballContents": "Public ESM entries, types, Service Worker and third-party license checked from original archive",
+    "browserRegression": "8 Chrome cases passed from the original archive: Shaka ready, delayed bootstrap and first-503 recovery (two pages, three ended/replay cycles each), plus HLS, dash.js, RxPlayer, MP4 and MP3 ready paths. Paired P2P bytes, playback, callbacks, seeking, direct-file unique byte bounds, reports and disposal checks passed."
+  }
+}
